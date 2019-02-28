@@ -4,7 +4,7 @@ export interface IRequest extends IncomingMessage {
   body?: any;
 }
 
-export const getSuGoJsonBodyParserMiddleware = (options?: any) => new SuGoJsonBodyParser().asMiddleware();
+export const getMiddleware = (options?: any) => new SuGoJsonBodyParser().asMiddleware();
 
 export class SuGoJsonBodyParser {
   public asMiddleware() {
@@ -31,4 +31,4 @@ export class SuGoJsonBodyParser {
   }
 }
 
-export default getSuGoJsonBodyParserMiddleware;
+export default getMiddleware;
