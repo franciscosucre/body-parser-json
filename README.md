@@ -1,4 +1,4 @@
-# **@sugo/cors**
+# **@sugo/body-parser-json**
 
 Middleware for parsing Json type requests
 
