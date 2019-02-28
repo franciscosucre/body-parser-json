@@ -9,7 +9,7 @@ export const getMiddleware = (options?: any) => new SuGoJsonBodyParser().asMiddl
 export class SuGoJsonBodyParser {
   public asMiddleware() {
     return async (req: IRequest, res: ServerResponse, next?: () => any) => {
-      const contentType = req.headers['content-type'] as string;
+      const contentType = req.headers['content-type'] || '';
       const isJson: boolean = contentType.toLowerCase().includes('application/json');
       if (!isJson) {
         return next ? await next() : null;
